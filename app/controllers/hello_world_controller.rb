@@ -9,5 +9,6 @@ class HelloWorldController < ApplicationController
   def calculate
     calculator = SpreadSheetCalculator.new(params[:input])
     @output = calculator.perform
+    Submission.create(output: @output)
   end
 end
