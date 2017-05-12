@@ -1,5 +1,4 @@
 /* eslint-disable import/prefer-default-export */
 
-export const HELLO_WORLD_NAME_UPDATE = 'HELLO_WORLD_NAME_UPDATE';
-export const SUBMIT = 'SUBMIT';
-export const CALCULATION_RECEIVED = 'CALCULATION_RECEIVED';
+export const NAME_UPDATE = 'NAME_UPDATE'
+export const INFO_RECEIVED = 'INFO_RECEIVED';

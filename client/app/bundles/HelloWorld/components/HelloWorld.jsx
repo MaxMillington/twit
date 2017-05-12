@@ -29,6 +29,16 @@ const HelloWorld = (props) => {
   return (
     <div>
       {displayTweets()}
+      <input
+        value={props.name}
+        onChange={(e) => props.updateName(e.target.value)}
+      />
+      <button
+        className="submit-button"
+        onClick={() => props.submit(props.name)}
+      >
+        Submit
+      </button>
     </div>
   )
 }
@@ -37,7 +47,9 @@ HelloWorld.propTypes = {
   tweets: PropTypes.any,
   user: PropTypes.any,
   props: PropTypes.any,
-  markovTweets: PropTypes.array
+  markovTweets: PropTypes.array,
+  submit: PropTypes.func,
+  updateName: PropTypes.func
 };
 
 export default HelloWorld;
