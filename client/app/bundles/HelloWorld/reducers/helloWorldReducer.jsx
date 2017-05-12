@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import { HELLO_WORLD_NAME_UPDATE, CALCULATION_RECEIVED } from '../constants/helloWorldConstants';
 
-const name = (state = '', action) => {
+const user = (state = '', action) => {
   switch (action.type) {
     case HELLO_WORLD_NAME_UPDATE:
       return action.text;
@@ -10,15 +10,15 @@ const name = (state = '', action) => {
   }
 };
 
-const output = (state = '', action) => {
+const tweets = (state = '', action) => {
   switch (action.type) {
     case CALCULATION_RECEIVED:
-      return action.data.output;
+      return action.data.tweets;
     default:
       return state;
   }
 };
 
-const helloWorldReducer = combineReducers({ name, output });
+const helloWorldReducer = combineReducers({ user, tweets });
 
 export default helloWorldReducer;

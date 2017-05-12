@@ -6,6 +6,7 @@ json.user do
 end
 
 json.tweets @tweets do |tweet|
+  json.id tweet.id
   json.text tweet.full_text
   json.created_at tweet.created_at
   json.favorite_count tweet.favorite_count
