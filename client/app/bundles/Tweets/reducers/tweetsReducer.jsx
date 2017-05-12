@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { NAME_SUBMITTED, INFO_RECEIVED, NAME_UPDATE } from '../constants/helloWorldConstants';
+import { INFO_RECEIVED, NAME_UPDATE } from '../constants/tweetsConstants';
 
 const user = (state = '', action) => {
   switch (action.type) {
@@ -37,6 +37,6 @@ const markovTweets = (state = '', action) => {
   }
 };
 
-const helloWorldReducer = combineReducers({ name, user, tweets, markovTweets });
+const tweetsReducer = combineReducers({ name, user, tweets, markovTweets });
 
-export default helloWorldReducer;
+export default tweetsReducer;

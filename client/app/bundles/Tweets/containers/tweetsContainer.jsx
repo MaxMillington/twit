@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import HelloWorld from '../components/HelloWorld';
-import * as actions from '../actions/helloWorldActionCreators'
+import Tweets from '../components/Tweets';
+import * as actions from '../actions/tweetsActionCreators'
 
 const mapStateToProps = (state) => ({
   name: state.name,
@@ -9,4 +9,4 @@ const mapStateToProps = (state) => ({
   markovTweets: state.markovTweets
 });
 
-export default connect(mapStateToProps, actions)(HelloWorld);
+export default connect(mapStateToProps, actions)(Tweets);

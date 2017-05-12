@@ -1,5 +1,4 @@
-class HelloWorldController < ApplicationController
-  skip_before_action :verify_authenticity_token
+class TweetsController < ApplicationController
   def index
     ts = TwitterService.new
     input = params[:input] ? params[:input] : 'jimmyfallon'

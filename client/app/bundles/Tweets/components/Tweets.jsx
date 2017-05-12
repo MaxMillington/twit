@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Tweet from 'react-tweet'
 
-const HelloWorld = (props) => {
+const Tweets = (props) => {
   const user =  props.user ? props.user : props.props.user
   const tweets =  props.tweets ? props.tweets : props.props.tweets
   const profileImageObject = user.profileImageUrl
@@ -43,7 +43,7 @@ const HelloWorld = (props) => {
   )
 }
 
-HelloWorld.propTypes = {
+Tweets.propTypes = {
   tweets: PropTypes.any,
   user: PropTypes.any,
   props: PropTypes.any,
@@ -52,4 +52,4 @@ HelloWorld.propTypes = {
   updateName: PropTypes.func
 };
 
-export default HelloWorld;
+export default Tweets;
