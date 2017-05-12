@@ -5,25 +5,16 @@ class Dictionary
     @words_for = Hash.new
     @start_words = Array.new
 
-    # Standarize input text
     text.delete! "\n"
 
-    # Process each sentence
-
-    # <sentences> has format sentence+terminator:
-    #   ["sent1", "term1", "sent2", "term2", ...]
     chars = /([.!?]+)/
     sentences = text.split(chars)
     sentences.each_slice(2) { |s,t| process_sentence(s.strip,t) }
   end
 
-  # @example Process a sentence
-  #   process_sentence("It is cloudy today", "!")
-
   private def process_sentence(sentence, terminator)
     chars = "([,;:])"
-
-    # Split <sentence> into words
+    
     words = sentence.gsub(/[^#{chars}\w'\s]/, "").gsub(/(#{chars})\s+/, '\1').split(/\s+|#{chars}/)
     words << terminator
 
