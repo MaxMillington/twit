@@ -17,7 +17,7 @@ const HelloWorld = (props) => {
           screen_name: user.screenName,
           profile_image_url: profileImageUrl
         },
-        text: tweet.text,
+        text: props.markovTweets[index],
         created_at: tweet.createdAt,
         favorite_count: tweet.favoriteCount,
         retweet_count: tweet.retweetCount,
@@ -26,7 +26,6 @@ const HelloWorld = (props) => {
     })
   }
 
-
   return (
     <div>
       {displayTweets()}
@@ -34,16 +33,11 @@ const HelloWorld = (props) => {
   )
 }
 
-// const HelloWorld = ({ tweets, user }) => (
-//   <div className="what">
-//       FUFUU
-//   </div>
-// );
-
 HelloWorld.propTypes = {
   tweets: PropTypes.any,
   user: PropTypes.any,
-  props: PropTypes.any
+  props: PropTypes.any,
+  markovTweets: PropTypes.array
 };
 
 export default HelloWorld;

@@ -19,6 +19,15 @@ const tweets = (state = '', action) => {
   }
 };
 
-const helloWorldReducer = combineReducers({ user, tweets });
+const markovTweets = (state = '', action) => {
+  switch (action.type) {
+    case CALCULATION_RECEIVED:
+      return action.data.tweets;
+    default:
+      return state;
+  }
+};
+
+const helloWorldReducer = combineReducers({ user, tweets, markovTweets });
 
 export default helloWorldReducer;

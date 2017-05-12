@@ -4,5 +4,6 @@ class HelloWorldController < ApplicationController
     ts = TwitterService.new
     @tweets = ts.get_tweets_for('jimmyfallon')
     @user = ts.user('jimmyfallon')
+    @markov_tweets = MarkovService.new.perform(@tweets)
   end
 end

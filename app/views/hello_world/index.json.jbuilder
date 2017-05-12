@@ -12,3 +12,5 @@ json.tweets @tweets do |tweet|
   json.favorite_count tweet.favorite_count
   json.retweet_count tweet.retweet_count
 end
+
+json.markov_tweets @markov_tweets
