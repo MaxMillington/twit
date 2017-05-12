@@ -20,15 +20,15 @@ export const calculationReceived = (data) => ({
   data
 })
 
-export function performCalculation(input) {
-  return function(dispatch) {
-    return $.ajax({
-      type: 'POST',
-      url: '/calculate',
-      data: { input: input },
-      success: (data) => {
-        dispatch(calculationReceived(data))
-      }
-    })
-  }
-}
+// export function performCalculation(input) {
+//   return function(dispatch) {
+//     return $.ajax({
+//       type: 'POST',
+//       url: '/calculate',
+//       data: { input: input },
+//       success: (data) => {
+//         dispatch(calculationReceived(data))
+//       }
+//     })
+//   }
+// }

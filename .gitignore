@@ -1,0 +1,11 @@
+
+.env
+.gitignore
+.idea/.generators
+.idea/.rakeTasks
+.idea/workspace.xml
+app/assets/webpack/
+client/node_modules/
+log/
+node_modules/
+tmp/

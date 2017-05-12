@@ -12,8 +12,4 @@
 
 ActiveRecord::Schema.define(version: 20170509035942) do
 
-  create_table "submissions", force: :cascade do |t|
-    t.string "output"
-  end
-
 end
